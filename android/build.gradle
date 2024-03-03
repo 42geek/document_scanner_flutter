@@ -27,6 +27,7 @@ apply plugin: 'kotlin-android'
 
 
 android {
+    namespace "com.document.scanner.flutter.document_scanner_flutter"
     compileSdkVersion 29
 
     defaultConfig {
@@ -38,6 +39,13 @@ android {
         ndk {
             moduleName "Scanner"
             abiFilters 'armeabi-v7a'
+        }
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+        kotlinOptions {
+            jvmTarget = '1.8'
         }
     }
 
